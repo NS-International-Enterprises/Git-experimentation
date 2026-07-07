@@ -1,14 +1,14 @@
 name: CI workflow
 
 on:
-  push:
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: arc-runner-set
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Run Hello
         run: echo "Hello, World!"
       - name: Current Date
