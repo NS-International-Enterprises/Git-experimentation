@@ -9,7 +9,7 @@ permissions:
 jobs:
   build:
     name: Build Application
-    runs-on: arc-runner-set
+    runs-on: github-hosted-runner
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
