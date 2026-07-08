@@ -9,7 +9,7 @@ permissions:
 jobs:
   build:
     name: Build Application
-    runs-on: github-hosted-runner
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
