@@ -1,11 +1,17 @@
-name: CI workflow
+name: Enterprise CI Workflow
 
 on:
-  push:
+  pull_request:
+    branches:
+      - main
 
+permissions:
+  contents: read
+
+env:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: runner-scale-set
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
